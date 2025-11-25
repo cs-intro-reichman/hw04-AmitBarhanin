@@ -5,7 +5,7 @@ public class Primes {
         AllTrue(checkPrime);
         checkPrime[0] = false;
         checkPrime[1] = false;
-        System.out.printf("Prime numbers up to %d:", range);
+        System.out.printf("Prime numbers up to %d:\n", range);
         for (int i = 2; i < Math.sqrt(range); i++) {
             for (int j = i + 1; j < checkPrime.length; j++) {
                 if (IsDivide(j, i)) {
@@ -21,18 +21,10 @@ public class Primes {
             }
         }
         double percent = ((double) count / (double) range) * 100;
-        System.out.printf("There are %d primes between 2 and %d (%d%% are primes)", count, range, (int) percent);
+        System.out.printf("There are %d primes between 2 and %d (%d%% are primes)\n", count, range, (int) percent);
 
     }
 
-    // public static boolean[] FalseArr(boolean[] arr){
-    // boolean[] newArr = new boolean[arr.length];
-    // for (int i = 0; i < newArr.length; i++) {
-    // if (arr[i]) {
-
-    // }
-    // }
-    // }
 
     public static boolean IsDivide(int num1, int num2) {
         if (num1 % num2 == 0) {
